@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GridS System W/Sass</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .grid>div {
+            border: solid 1px black;
+            background: whitesmoke;
+            padding: 70px 0;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="grid">
+        <div class="col-1 col-sm-4 col-lg-12 col-md-6">X-Small</div>
+        <div class="col-6 col-sm-3 col-lg-6 col-md-3">Medium</div>
+        <div class="col-2 col-sm-3 col-lg-6 col-md-3">M-Small</div>
+        <div class="col-4 col-sm-2 col-lg-12 col-md-6">Small</div>
+        <div class="col-2 col-sm-6 col-lg-4 col-md-2">M-Small</div>
+        <div class="col-8 col-sm-3 col-lg-4 col-md-2">Half-Large</div>
+        <div class="col-12 col-sm-3 col-lg-4 col-md-2">Large</div>
+
+    </div>
 </body>
+
 </html>
