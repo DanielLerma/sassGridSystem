@@ -1,0 +1,33 @@
+{
+  "name": "sassgridsystem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "styles": "gulp styles",
+    "scripts": "gulp scripts",
+    "scripts:watch": "gulp scripts:watch",
+    "serve": "gulp serve",
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielLerma/sassGridSystem.git"
+  },
+  "author": "Daniel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielLerma/sassGridSystem/issues"
+  },
+  "homepage": "https://github.com/DanielLerma/sassGridSystem#readme",
+  "dependencies": {
+    "sass": "^1.38.2",
+    "typescript": "^4.4.3"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1"
+  }
+}

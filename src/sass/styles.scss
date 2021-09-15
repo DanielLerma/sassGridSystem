@@ -1,0 +1,124 @@
+@import 'colors';
+@import 'width';
+
+$num-cols-list: 1, 2, 3, 4, 6, 8, 12;
+$max-cols: 12;
+
+@function getWidth($w){
+    @return $w / $max-cols * 100%; 
+}
+
+.grid{
+    div{
+        float: left;
+    }
+}
+
+.grid::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.grid{ 
+    .col-1{
+        width: $col1;
+        background-color: $primaryColor;
+    }
+}
+  
+.grid{ 
+    .col-2{
+        width: $col2;
+        background-color: $primaryColor;
+    }
+}
+  
+.grid{ 
+    .col-3{
+        width: $col3;
+        background-color: $primaryColor;
+    }
+}
+  
+.grid{ 
+    .col-4{
+        width: $col4;
+        background-color: $primaryColor;
+    }
+}
+  
+.grid{ 
+    .col-6{
+        width: $col6;
+        background-color: $primaryColor;
+    }
+}
+
+.grid{ 
+    .col-8{
+        width: $col8;
+        background-color: $primaryColor;
+    }
+}
+  
+.grid{ 
+    .col-12{
+        width: $col12;
+        background-color: $primaryColor;
+    }
+}
+
+@mixin sm-col{
+    @media screen and (min-width: 500px){
+        // @content se reemplaza con lo que pongamos
+        @content;
+    }
+}
+
+// mandamos llamar el mixin de arriba
+@include sm-col{
+    .grid {
+        @each $size in $num-cols-list {
+            // interpolación
+            > .col-sm-#{size} {
+                width: getWidth($size);
+            }
+        }
+    }
+}
+
+@mixin md-col{
+    @media screen and (min-width: 800px){
+        @content;
+    }
+}
+
+@include md-col{
+    .grid {
+        @each $size in $num-cols-list {
+            // interpolación
+            > .col-md-#{size} {
+                width: getWidth($size);
+            }
+        }
+    }
+        
+}
+
+@mixin lg-col{
+    @media screen and (min-width: 1200px){
+        @content;
+    }
+}
+
+@include lg-col{
+    .grid {
+        @each $size in $num-cols-list {
+            // interpolación
+            > .col-lg-#{size} {
+                width: getWidth($size);
+            }
+        }
+    }
+        
+}
